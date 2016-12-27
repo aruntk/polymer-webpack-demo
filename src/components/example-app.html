@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- html import works with hot code reload -->
+<link rel="import" href="example-item.html">
+
+<dom-module id="example-app">
+  <template>
+        
+        <paper-header-panel mode="standard" class="fit" main>
+          <paper-toolbar>
+            <div class="title" title>Polymer Webpack Demo</div>
+          </paper-toolbar>
+          <div class="vertical layout centre container">
+
+            <div class="layout horizontal center center-justified">
+                <example-item></example-item>
+            </div>
+            <div class="vertical layout center">
+              <div class="spinner">
+                <paper-spinner active="{{loading}}"></paper-spinner>
+              </div>
+            </div>
+
+          </div>
+        </paper-header-panel>
+  </template>
+</dom-module>
+<!-- script import works -->
+<script src="example-app.js"></script>

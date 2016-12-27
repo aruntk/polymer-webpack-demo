@@ -1,0 +1,40 @@
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="example-item">
+  <template>
+    <style>
+.white {
+  --paper-card-header-color: white;
+  --paper-card-header-image-text: {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+  }
+}
+paper-card {
+  width: 400px;
+}
+
+    </style>
+      <paper-card class="white">
+        <div class="card-content">
+          <h2>example name</h2>
+          <h4>example description</h4>
+        </div>
+        <div class="card-actions layout horizontal">
+          <div class="flex"></div>
+          <paper-button disabled>Share</paper-button>
+          <paper-button>More</paper-button>
+        </div>
+      </paper-card>
+  </template>
+</dom-module>
+<script>
+// es6 works here
+const exampleItem = {
+  is: 'example-item',
+}
+Polymer(exampleItem)
+</script>

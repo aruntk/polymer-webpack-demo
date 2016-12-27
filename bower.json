@@ -1,0 +1,22 @@
+{
+  "name": "polymer-webpack-demo",
+  "authors": [
+    "aruntk <aruntknambiar@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "app-route": "PolymerElements/app-route#^0.9.3",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7"
+  }
+
+}
