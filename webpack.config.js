@@ -32,6 +32,8 @@ module.exports = {
     ],
   },
   devServer: {
+    // serve index.html in place of 404 responses to allow HTML5 history
+    historyApiFallback: true,
   },
   devtool: 'eval-source-map'
 };
