@@ -1,9 +1,12 @@
 Polymer({
   is: 'example-app',
   properties: {
-    prop1: {
-      type: Array,
-      value: [1, 2, 3, 4, 5],
-    },
+    route: Object,
+  },
+  second() {
+    this.set('routeData.page', 'second');
+  },
+  home() {
+    this.set('routeData.page', '');
   },
 });

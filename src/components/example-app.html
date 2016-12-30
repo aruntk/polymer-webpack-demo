@@ -1,3 +1,11 @@
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
 <link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
@@ -8,24 +16,54 @@
 
 <dom-module id="example-app">
   <template>
-        
-        <paper-header-panel mode="standard" class="fit" main>
-          <paper-toolbar>
-            <div class="title" title>Polymer Webpack Demo</div>
-          </paper-toolbar>
-          <div class="vertical layout centre container">
+    <style>
+paper-card {
+  width: 400px;
+}
 
-            <div class="layout horizontal center center-justified">
-                <example-item></example-item>
-            </div>
-            <div class="vertical layout center">
-              <div class="spinner">
-                <paper-spinner active="{{loading}}"></paper-spinner>
-              </div>
-            </div>
+    </style>
 
-          </div>
-        </paper-header-panel>
+    <!--================== <Router> ================-->
+
+    <app-location route="{{route}}"></app-location>
+
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}"></app-route>
+
+    <!--================= </Router> ================-->       
+
+    <paper-header-panel mode="standard" class="fit" main>
+      <paper-toolbar>
+        <div class="title" title>Polymer Webpack Demo</div>
+      </paper-toolbar>
+      <div class="horizontal layout centre center-justified container">
+
+
+        <iron-pages class="main" id="mainView" selected="{{routeData.page}}" attr-for-selected="name">
+
+          <paper-card heading="ROUTE:1" id="region1" name="">
+            <div class="card-content">
+              <div> You are in Home page </div>
+              <div>MWC - meteor web components.</div>
+            </div>
+            <div class="card-actions">
+              <paper-button on-click="second">Next</paper-button>
+            </div>
+          </paper-card>
+
+          <paper-card heading="ROUTE:2" name="second" id="region2">
+            <div class="card-content">
+              <example-item class="flex layout vertical"></example-item>
+            </div>
+            <div class="card-actions">
+              <paper-button on-click="home">
+                Go back
+              </paper-button>
+            </div>
+          </paper-card>
+
+        </iron-pages>
+      </div>
+    </paper-header-panel>
   </template>
 </dom-module>
 <!-- script import works -->
