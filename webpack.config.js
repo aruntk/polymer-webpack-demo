@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'wc',
-      }
+      },
     ],
   },
   devServer: {
