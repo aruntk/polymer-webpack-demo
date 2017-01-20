@@ -13,8 +13,10 @@
 </dom-module>
 <script>
 // es6 works here
+const exampleBehavior = exampleBehavior || {};
 const exampleItem = {
   is: 'example-item',
+  behaviors: [ exampleBehavior ]
 }
-Polymer(exampleItem)
+Polymer(exampleItem);
 </script>

@@ -31,6 +31,17 @@ module.exports = {
       },
     ],
   },
+  // if you want to provile globals
+  // resolve: {
+    // alias: {
+      // 'extTestModule': path.resolve(__dirname, './src/components/test.js')
+    // }
+  // },
+  // plugins: [
+    // new webpack.ProvidePlugin({
+      // "extTestModule": "extTestModule",
+    // })
+  // ],
   devServer: {
     // serve index.html in place of 404 responses to allow HTML5 history
     historyApiFallback: true,
