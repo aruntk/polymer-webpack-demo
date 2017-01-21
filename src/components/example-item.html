@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="example-behavior.html">
 <dom-module id="example-item">
   <template>
     <div>
@@ -13,10 +14,9 @@
 </dom-module>
 <script>
 // es6 works here
-const exampleBehavior = exampleBehavior || {};
-const exampleItem = {
+let exampleItem = {
   is: 'example-item',
-  behaviors: [ exampleBehavior ]
+  behaviors: [ myBehaviors.exampleBehavior ]
 }
 Polymer(exampleItem);
 </script>

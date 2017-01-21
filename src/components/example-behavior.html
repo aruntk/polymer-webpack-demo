@@ -1,7 +1,9 @@
 <script>
-exampleBehavior = {
+var myBehaviors = {};
+myBehaviors.exampleBehavior = {
   attached() {
-  console.log(1);
+    console.log(1);
+  }
 };
-
+window.myBehaviors = myBehaviors;
 </script>

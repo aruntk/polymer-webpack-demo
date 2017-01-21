@@ -14,6 +14,11 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.html$/,
+        loader: 'babel!wc',
+      },
+
+      {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/
@@ -25,22 +30,18 @@ module.exports = {
           name: '[name].[ext]?[hash]'
         }
       },
-      {
-        test: /\.html$/,
-        loader: 'wc',
-      },
     ],
   },
   // if you want to provile globals
   // resolve: {
-    // alias: {
-      // 'extTestModule': path.resolve(__dirname, './src/components/test.js')
-    // }
+  // alias: {
+  // 'extTestModule': path.resolve(__dirname, './src/components/test.js')
+  // }
   // },
   // plugins: [
-    // new webpack.ProvidePlugin({
-      // "extTestModule": "extTestModule",
-    // })
+  // new webpack.ProvidePlugin({
+  // "extTestModule": "extTestModule",
+  // })
   // ],
   devServer: {
     // serve index.html in place of 404 responses to allow HTML5 history

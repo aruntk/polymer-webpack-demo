@@ -10,4 +10,3 @@ Polymer({
     this.set('routeData.page', '');
   },
 });
-
