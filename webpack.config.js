@@ -15,11 +15,6 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.html$/,
-        loader: 'babel-loader!wc-loader?minify=true',
-      },
-
-      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
@@ -30,6 +25,10 @@ module.exports = {
         query: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'babel-loader!wc-loader?minify=true',
       },
     ],
   },
