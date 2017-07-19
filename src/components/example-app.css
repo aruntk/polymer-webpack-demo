@@ -1,6 +1,9 @@
 .card-actions {
   background: url(bg.png);
 }
+.card-actions > paper-button {
+  color: red;
+}
 paper-card {
   width: 400px;
 }
