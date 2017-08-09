@@ -17,20 +17,22 @@
 <dom-module id="example-app">
   <template>
 
-    <link rel="stylesheet" href="./example-app.css">
-<!-- <style> -->
-<!-- .card-actions { -->
-  <!-- background: url(bg.png); -->
-<!-- } -->
-<!-- .card-actions > paper-button { -->
-  <!-- color: red; -->
-<!-- } -->
+    <!-- you can include stylesheets -->
+    <!-- <link rel="stylesheet" href="./example-app.css"> -->
+<style>
+.card-actions {
+  /* this file path gets processed by wc-loader */
+  background: url(bg.png);
+}
+.card-actions > paper-button {
+  color: red;
+}
 
-<!-- paper-card { -->
-  <!-- width: 400px; -->
-<!-- } -->
+paper-card {
+  width: 400px;
+}
 
-<!-- </style> -->
+</style>
     <!--================== <Router> ================-->
 
     <app-location route="{{route}}"></app-location>
