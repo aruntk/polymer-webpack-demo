@@ -10,25 +10,35 @@ module.exports = {
   },
   // the following config throws error in webpack 2.2.0
   // resolveLoader: {
-    // root: path.join(__dirname, 'node_modules'),
+  // root: path.join(__dirname, 'node_modules'),
   // },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        use: [{
+          loader: 'babel-loader',
+        }],
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]?[hash]'
+          }
+        }]
       },
       {
         test: /\.html$/,
-        loader: 'babel-loader!wc-loader?minify=true',
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'wc-loader?minify=true',
+          }]
       },
     ],
   },
@@ -49,4 +59,5 @@ module.exports = {
   },
   devtool: 'eval-source-map'
 };
+
 
