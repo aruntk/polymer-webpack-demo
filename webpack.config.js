@@ -37,7 +37,11 @@ module.exports = {
             loader: 'babel-loader',
           },
           {
-            loader: 'wc-loader?minify=true',
+            loader: 'wc-loader',
+            options: {
+              minify: true,
+              root: '/'
+            }
           }]
       },
     ],
